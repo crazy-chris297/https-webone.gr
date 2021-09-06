@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+?>
+
+<div class="product-layers-numlayers">
+  <span class="numlayers-num"><?= $_product->getLayersNumber() ?></span>
+  <span class="numlayers-text"><?= _('material layers') ?></span>
+</div>

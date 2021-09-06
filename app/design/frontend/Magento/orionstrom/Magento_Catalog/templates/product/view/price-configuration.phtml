@@ -1,0 +1,91 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+
+  $config = $block->getLayout()->createBlock(\Magento\Config\Block\System\Config\Form::class);
+  $phone = $config->getConfigValue('general/store_information/phone');
+
+?>
+<div class="price-configuration row">
+  <div class="col-5">
+    <p class="text-right"><?= _('Configure and buy') ?></p>
+    <div class="my-mid">
+      <div class="form-group row justify-content-end align-items-center">
+        <label for="configWidth" class="col-sm-9 col-form-label text-right">
+          <?= _('Width') ?>
+        </label>
+        <div class="col-sm-3">
+          <input type="text" id="configWidth" class="form-control config-form-input" />
+        </div>
+      </div>
+
+      <div class="form-group row justify-content-end align-items-center">
+        <label for="configLength" class="col-sm-9 col-form-label text-right">
+          <?= _('Length') ?>
+        </label>
+        <div class="col-sm-3">
+          <input type="text" id="configLength" class="form-control config-form-input" />
+        </div>
+      </div>
+
+      <div class="form-group row justify-content-end align-items-center">
+        <label for="configQuantity" class="col-sm-9 col-form-label text-right">
+          <?= _('Quantity') ?>
+        </label>
+        <div class="col-sm-3">
+          <input type="text" id="configQuantity" class="form-control config-form-input" />
+        </div>
+      </div>
+    </div>
+
+    <p class="text-right"><?= _('5 - 10 days delivery') ?></p>
+    <p class="text-right"><?= _('Free shipping*') ?></p>
+  </div>
+
+  <div class="col-7 pricing-content">
+    <div class="price-config-circles">
+
+      <div class="price-config-circle">
+        <div class="config-row">
+          <span><?= _('Price') ?></span>
+          <span class="price-config-price big-text">
+            <!-- change this to product price -->
+            535,68
+          </span>
+        </div>
+        <div class="config-row">
+          <span><?= _('Buy it') ?></span>
+        </div>
+      </div>
+
+      <div class="price-config-circle bordered">
+        <div class="config-row">
+          <span><?= _('Telephone orders') ?></span>
+        </div>
+        <div class="config-row">
+          <span class="big-text">
+            <?= $phone ?>
+          </span>
+        </div>
+      </div>
+
+      <div class="price-config-circle">
+        <label for="configZipCode"><?= _('ZIP code') ?></label>
+        <input type="text" id="configZipCode" class="form-control config-form-input white" />
+        <span><?= _('Try it') ?></span>
+      </div>
+    </div>
+    <div class="payment-text">
+      <p><?= _('Safe payments through Piraeus bank') ?></p>
+      <p><?= _('Find out about all available payment and shipping methods') ?></p>
+    </div>
+  </div>
+</div>

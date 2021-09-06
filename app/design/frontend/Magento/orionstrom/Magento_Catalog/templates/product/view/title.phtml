@@ -1,0 +1,34 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+  $product_types = explode(
+    ', ',
+    $_product
+      ->getResource()
+      ->getAttribute('type')
+      ->getFrontend()
+      ->getValue($_product)
+  );
+?>
+
+  <div class="product-title">
+      <h1>
+        <?= $block->escapeHtml($_product->getSku()) ?>
+        <?= $block->escapeHtml($_product->getName()) ?>
+      </h1>
+      <ul class="product-types">
+        <?php foreach ($product_types as $product_type) { ?>
+          <li>
+            <?= $product_type ?>
+          </li>
+        <?php } ?>
+      </ul>
+  </div>

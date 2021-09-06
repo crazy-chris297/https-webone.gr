@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+  $images = $block->getGalleryImages()->getItems();
+  $mainImage = current(array_filter($images, function ($img) use ($block) {
+    return $block->isMainImage($img);
+  }));
+
+  if (!empty($images) && empty($mainImage)) {
+    $mainImage = $block->getGalleryImages()->getFirstItem();
+  }
+
+  $helper = $block->getData('imageHelper');
+  $mainImageData = $mainImage ?
+    $mainImage->getData('medium_image_url') :
+    $helper->getDefaultPlaceholderUrl('image');
+  ?>
+
+  <div class="product-image">
+    <img src="<?= $mainImageData ?>" />
+  </div>

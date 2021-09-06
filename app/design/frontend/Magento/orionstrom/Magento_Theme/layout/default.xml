@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">header links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">423</argument>
+                <argument name="logo_img_height" xsi:type="number">40</argument>
+            </arguments>
+        </referenceBlock>
+		<referenceBlock name="header-wrapper">
+			<container htmlTag="div" htmlClass="top-contact">
+				<block class="Magento\Cms\Block\Block" name="headerno" after="-">
+					<arguments>
+						<argument name="block_id" xsi:type="string">phone-no</argument>
+					</arguments>
+				</block>
+			</container>	
+		</referenceBlock>
+		<referenceContainer name="footer-container">
+			<block class="Magento\Framework\View\Element\Template" name="instagram-top" template="Magento_Theme::html/footer-top.phtml" before="-"/>
+		</referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
+			<container htmlTag="div" htmlClass="footer-left">
+				<container htmlTag="div" htmlClass="row">
+					<container htmlTag="div" htmlClass="col-md-6 col-sm-12">
+						<block class="Magento\Cms\Block\Block" name="informarion">
+							<arguments>
+								<argument name="block_id" xsi:type="string">footer-information</argument>
+							</arguments>
+						</block>
+					</container>
+					<container htmlTag="div" htmlClass="col-md-6 col-sm-12">
+						<block class="Magento\Cms\Block\Block" name="footer-col-2" after="-">
+							<arguments>
+								<argument name="block_id" xsi:type="string">footer-address</argument>
+							</arguments>
+						</block>
+					</container>
+				</container>
+				
+			</container>
+			
+			<container htmlTag="div" htmlClass="footer-right" name="ft-right" before="-">
+				<container htmlTag="div" htmlClass="row">
+					<container htmlTag="div" htmlClass="col-md-12 social-share">
+						<block class="Magento\Cms\Block\Block" name="follow-us">
+							<arguments>
+								<argument name="block_id" xsi:type="string">follow-us</argument>
+							</arguments>
+						</block>
+					</container>
+				</container>
+			</container>
+					
+        </referenceContainer>
+		
+		<referenceContainer name="sidebar.additional">
+		
+			
+			<container htmlTag="div" htmlClass="ad-banner">
+				<block class="Magento\Cms\Block\Block" name="banner">
+					<arguments>
+						<argument name="block_id" xsi:type="string">banner</argument>
+					</arguments>
+				</block>
+			</container>
+			<container htmlTag="div" htmlClass="ad-banner">
+				<block class="Magento\Cms\Block\Block" name="banner-2">
+					<arguments>
+						<argument name="block_id" xsi:type="string">banner-2</argument>
+					</arguments>
+				</block>
+			</container>
+			
+			<container htmlTag="div" htmlClass="text-block">
+				<block class="Magento\Cms\Block\Block" name="text-block">
+					<arguments>
+						<argument name="block_id" xsi:type="string">category-list</argument>
+					</arguments>
+				</block>
+			</container>
+		</referenceContainer>
+		<referenceBlock name="catalog.compare.sidebar" remove="true"/> 
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+        <referenceBlock name="related.product.addto.compare" remove="true" />
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="header.panel" remove="true"/>
+		<referenceBlock name="top.search" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+		<referenceBlock name="form.subscribe" remove="true"/>
+        
+		
+		
+		<move element="store_language" destination="header-wrapper" after="logo"/>
+		<move element="navigation.sections" destination="header-wrapper" after="logo"/>
+		<move element="form.subscribe" destination="ft-right" after="-"/>
+		
+    </body>
+</page>

@@ -1,0 +1,36 @@
+<div class="bestseller-wrapper">
+    <div class="title-bar">
+        <h3><?php /* @escapeNotVerified */ echo __('Best Sellers') ?></h3>
+        
+    </div>
+
+    <div id="prd-tabs" class="home-product-tab">
+      <ul class="tab-option">
+        <li><span><?php /* @escapeNotVerified */ echo __('Show') ?>:</span></li>
+        <li><a href="#tabs-1"><?php /* @escapeNotVerified */ echo __('All') ?></a></li>
+        <li><a href="#tabs-2"><?php /* @escapeNotVerified */ echo __('New') ?></a></li>
+        <li><a href="#tabs-3"><?php /* @escapeNotVerified */ echo __('On Sale') ?></a></li>        
+      </ul>
+      
+      <div id="tabs-1">
+        <?php echo $this->getLayout()->createBlock("Magento\Catalog\Block\Product\Widget\NewWidget")->setDisplayType("all_products")->setProductsCount("10")->setTemplate("product/widget/new/content/new_grid.phtml")->toHtml(); ?>
+      </div>
+      
+      <div id="tabs-2">
+        <?php echo $this->getLayout()->createBlock("Magento\Catalog\Block\Product\Widget\NewWidget")->setDisplayType("new_products")->setProductsCount("10")->setTemplate("product/widget/new/content/new_grid.phtml")->toHtml(); ?>
+      </div>
+      
+      <div id="tabs-3">
+        <?php echo $this->getLayout()->createBlock("WeltPixel\OwlCarouselSlider\Block\Slider\Products")->setProductsType("sell_products")->setProductsCount("10")->setTemplate("Magento_Theme::html/products.phtml")->toHtml();?>
+      </div>
+    </div>
+
+</div>
+
+<script>
+require(['jquery', 'jquery/ui'], function($){
+    jQuery(document).ready(function(){
+        jQuery( "#prd-tabs" ).tabs();
+    });
+});
+</script>

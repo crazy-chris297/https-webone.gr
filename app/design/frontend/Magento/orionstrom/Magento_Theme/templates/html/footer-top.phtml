@@ -1,0 +1,70 @@
+<?php 
+$ftcompany=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('footer-company')->toHtml();
+$ftcs=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('footer-customer-support')->toHtml();
+$ftacc=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('footer-account')->toHtml();
+$ftcontact=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('footer-contacts')->toHtml();
+?>
+
+<div class="footer-top-content">
+<div class="row">
+    <div class="col-md-6">
+        <div class="ftl-content">
+            <div class="row">
+                <?php if($ftcompany!=''): ?>
+                    <div class="col-md-4">
+                        <?php echo $ftcompany; ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($ftcs!=''): ?>
+                    <div class="col-md-4">
+                        <?php echo $ftcs; ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($ftacc!=''): ?>
+                    <div class="col-md-4">
+                        <?php echo $ftacc; ?>
+                    </div>
+                <?php endif; ?>
+                
+            </div>
+        
+            <div class="payment">
+                <ul>
+                    <li><img src="<?php echo $this->getViewFileUrl('images/Mastercard.png'); ?>" /></li>
+                    <li><img src="<?php echo $this->getViewFileUrl('images/Visa.png'); ?>" /></li>
+                    <li><img src="<?php echo $this->getViewFileUrl('images/vbv.png'); ?>" /></li>
+                    <li><img src="<?php echo $this->getViewFileUrl('images/Maestro.png'); ?>" /></li>
+                    <li><img src="<?php echo $this->getViewFileUrl('images/PB_white_GR.png'); ?>" /></li>
+                    <li><img src="<?php echo $this->getViewFileUrl('images/mcs.png'); ?>" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="ftr-content">
+            <div class="row">
+                <?php if($ftcontact!=''): ?>
+                    <div class="col-md-6 ft-address">
+                        <?php echo $ftcontact; ?>
+                    </div>
+                <?php endif; ?>
+                
+            
+                <div class="col-md-6 ft-logo">
+                    <img src="<?php echo $this->getViewFileUrl('images/orionstrom-logo-footer.png'); ?>" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</div>
+

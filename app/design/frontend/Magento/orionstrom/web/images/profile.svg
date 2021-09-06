@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+  <g id="profile" transform="translate(-3.6 -6.5)">
+    <g id="Group_5" data-name="Group 5" transform="translate(3.6 6.5)">
+      <path id="Path_5" data-name="Path 5" d="M37.321,17.724A5.612,5.612,0,1,0,31.7,12.1,5.622,5.622,0,0,0,37.321,17.724Zm0-9.759A4.138,4.138,0,1,1,33.183,12.1,4.15,4.15,0,0,1,37.321,7.966Z" transform="translate(-26.855 -6.5)" fill="#e38bba"/>
+      <path id="Path_6" data-name="Path 6" d="M4.341,85.093H23.859a.736.736,0,0,0,.741-.741A7.06,7.06,0,0,0,17.548,77.3h-6.9A7.06,7.06,0,0,0,3.6,84.352a.736.736,0,0,0,.741.741Zm6.31-6.31h6.9a5.565,5.565,0,0,1,5.517,4.828H5.134A5.58,5.58,0,0,1,10.652,78.783Z" transform="translate(-3.6 -65.093)" fill="#e38bba"/>
+    </g>
+  </g>
+</svg>

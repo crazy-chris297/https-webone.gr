@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+
+  $mediaUrl = $_product
+    ->getStore()
+    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) 
+?>
+<div class="product-layers-right">
+  <img src="<?= $mediaUrl . 'catalog/product' . $_product->getLayersImage() ?>" />
+</div>

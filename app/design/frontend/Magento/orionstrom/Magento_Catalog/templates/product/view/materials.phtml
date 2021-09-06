@@ -1,0 +1,60 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+  $mediaUrl = $_product
+    ->getStore()
+    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) 
+    . 'wysiwyg/';
+
+  $baseImgName = 'orionstrom-product-attributes-material-';
+  $baseAttributeImagePath = BP . '/pub/media/wysiwyg/' . $baseImgName;
+  $productMaterialsAttribute = $_product
+    ->getResource()
+    ->getAttribute('materials');
+
+  $productMaterials = explode(
+    ', ',
+    $productMaterialsAttribute->getFrontend()->getValue($_product)
+  );
+
+  $productMaterials = array_filter($productMaterials);
+
+  if ($productMaterials) {
+?>
+<div class="product-materials">
+    <?php 
+      foreach ($productMaterials as $productMaterial) {
+        $optionId = $productMaterialsAttribute->getSource()->getOptionId($productMaterial);
+        $optionAdminLabel = str_replace(
+          ' ',
+          '-',
+          strtolower(
+            $productMaterialsAttribute
+              ->setStoreId(0)
+              ->getSource()
+              ->getOptionText($optionId)
+          )
+        );
+        $defaultImgPath = $mediaUrl . $baseImgName . 'default' . '.png';
+        $attributeImgPath = $mediaUrl . $baseImgName . $optionAdminLabel . '.png';
+        ;
+        if ($attributeImgPath) {
+      ?>
+        <img
+          src="<?= $attributeImgPath ?>"
+          class="product-materials-icon"
+        />
+      <?php 
+        }
+      } ?>
+</div>
+
+<?php } ?>

@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+  $guarantee = $_product
+    ->getResource()
+    ->getAttribute('guarantee')
+    ->getFrontend()
+    ->getValue($_product)
+  ;
+?>
+<div class="product-guarantee">
+  <div class="product-guarantee-box">
+    <span class="uppercase guarantee"><?= $guarantee ?></span>
+    <span class="uppercase guarantee-years"><?= _("Years") ?></span>
+    <span class="uppercase guarantee-guarantee"><?= _("Guarantee") ?></span>
+  </div>
+</div>

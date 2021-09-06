@@ -1,0 +1,11 @@
+<?php 
+$html=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('promo')->toHtml();
+
+if($html!=''):
+?>
+<div class="banner-content clearfix">
+    <?php echo $html; ?>
+</div>
+<?php endif; ?>

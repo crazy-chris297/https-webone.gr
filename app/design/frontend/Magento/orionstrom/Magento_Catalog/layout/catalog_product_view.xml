@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="mage/gallery/gallery.css"/>
+    </head>
+    <update handle="catalog_product_opengraph" />
+    <update handle="page_calendar"/>
+    <body>
+    <!-- START ROOT & HEAD STUFF -->
+        <referenceBlock name="root">
+            <arguments>
+                <argument name="add_attribute" xsi:type="string">itemscope itemtype="http://schema.org/Product"</argument>
+            </arguments>
+        </referenceBlock>
+        <attribute name="itemtype" value="http://schema.org/Product" />
+        <attribute name="itemscope" value="itemscope"/>
+        <referenceBlock name="head.components">
+            <block class="Magento\Framework\View\Element\Js\Components" name="checkout_page_head_components" template="Magento_Catalog::js/components.phtml"/>
+        </referenceBlock>
+    <!-- END ROOT & HEAD STUFF -->
+
+    <!-- START DISABLE BLOCKS -->
+        <referenceBlock name="additional" remove="true" />
+        <referenceBlock name="breadcrumbs" remove="true" />
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="product.info.description" remove="true" />
+        <referenceBlock name="product.info.details" remove="true" />
+        <referenceBlock name="product.attributes.wrapper" remove="true" />
+        <referenceContainer name="main" remove="true" />
+        <referenceContainer name="product.info.main" remove="true" />
+        <referenceContainer name="product.info.media" remove="true" />
+    <!-- END DISABLE BLOCKS -->
+
+    <!-- START PRODUCT TEMPLATE -->
+    <referenceContainer name="page.wrapper">
+
+        <container name="bb.product.info.head" htmlTag="div" htmlClass="product-info-head" before="main.content">
+            <container name="bb.product.info.head.content" htmlTag="div" htmlClass="page-main">
+                <block
+                    class="Magento\Catalog\Block\Product\View" 
+                    name="bb.product.title" 
+                    template="Magento_Catalog::product/view/title.phtml" 
+                />
+                <block
+                    class="Magento\Catalog\Block\Product\View\Gallery" 
+                    name="bb.product.image" 
+                    template="Magento_Catalog::product/view/image.phtml" 
+                />
+                <container htmlTag="div" htmlClass="row">
+                    <container htmlTag="div" htmlClass="col">
+                        <block
+                            class="Magento\Catalog\Block\Product\View" 
+                            name="bb.product.hardness" 
+                            template="Magento_Catalog::product/view/hardness.phtml" 
+                        />
+                        <block
+                            class="Magento\Catalog\Block\Product\View" 
+                            name="bb.product.characteristics" 
+                            template="Magento_Catalog::product/view/characteristics.phtml" 
+                        />
+                    </container>
+                    <container name="bb.product.sku.big.container" htmlTag="div" htmlClass="col-auto sku-big-container">
+                        <block
+                            class="Magento\Catalog\Block\Product\View" 
+                            name="bb.product.sku.big" 
+                            template="Magento_Catalog::product/view/skuBig.phtml" 
+                        />
+                    </container>
+                </container>
+            </container>
+        </container>
+
+        <container name="bb.main" htmlTag="div" htmlClass="page-main" after="bb.product.info.head">
+            <container name="bb.product.description.guarantee" htmlTag="div" htmlClass="row" before="-">
+                <container name="bb.product.description" htmlTag="div" htmlClass="col-6">
+                    <block
+                        class="Magento\Catalog\Block\Product\View\Description"
+                        name="bb.product.info.description"
+                        template="Magento_Catalog::product/view/description.phtml"
+                    />
+                </container>
+                <container name="bb.product.guarantee"  htmlTag="div" htmlClass="col-6">
+                    <block
+                        class="Magento\Catalog\Block\Product\View"
+                        name="bb.product.info.guarantee"
+                        template="Magento_Catalog::product/view/guarantee.phtml"
+                    />
+                    <block
+                        class="Magento\Catalog\Block\Product\View" 
+                        name="bb.product.materials" 
+                        template="Magento_Catalog::product/view/materials.phtml" 
+                    />
+                </container>
+            </container>
+        </container>
+
+        <container name="bb.product.info.layers" htmlTag="div" htmlClass="product-info-layers">
+            <container name="bb.product.info.layers.right.video.numlayers" htmlTag="div" htmlClass="product-info-layers-right-video-numlayers">
+                <block
+                    class="Magento\Catalog\Block\Product\View\Gallery"
+                    name="bb.product.info.layers-r.video"
+                    template="Magento_Catalog::product/view/layers-right-video.phtml"
+                />
+                <block
+                    class="Magento\Catalog\Block\Product\View"
+                    name="bb.product.info.layers-r.numlayers"
+                    template="Magento_Catalog::product/view/layers-right-numlayers.phtml"
+                />
+            </container>
+            <container name="bb.product.info.layers.container" htmlTag="div" htmlClass="page-main">
+                <container name="bb.product.info.layers.row" htmlTag="div" htmlClass="row">
+                    <container name="bb.product.info.layers.left" htmlTag="div" htmlClass="col-6 product-info-layers-left">
+                        <block
+                            class="Magento\Catalog\Block\Product\View"
+                            name="bb.product.info.layers-l"
+                            template="Magento_Catalog::product/view/layers-left.phtml"
+                        />
+                    </container>
+                    <container name="bb.product.info.layers.right" htmlTag="div" htmlClass="col-6 product-info-layers-right">
+                        <block
+                            class="Magento\Catalog\Block\Product\View\Gallery"
+                            name="bb.product.info.layers-r"
+                            template="Magento_Catalog::product/view/layers-right.phtml"
+                        />
+                    </container>
+                </container>
+            </container>
+        </container>
+
+        <container name="bb.product.price.configuration.container" htmlTag="div" htmlClass="page-main product-price-configuration">
+            <block
+                class="Magento\Catalog\Block\Product\View"
+                name="bb.product.price.configuration"
+                template="Magento_Catalog::product/view/price-configuration.phtml"
+            />
+        </container>
+    </referenceContainer>
+    <!-- END PRODUCT TEMPLATE -->
+    </body>
+</page>

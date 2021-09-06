@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+  $hardnessAttribute = $_product->getResource()->getAttribute('hardness');
+  $hardnessOptions = $hardnessAttribute->getSource()->getAllOptions();
+  $productHardness = $hardnessAttribute->getFrontend()->getValue($_product);
+?>
+<div class="product-hardness">
+  <span class="product-hardness-title"><?= $hardnessAttribute->getFrontendLabel() ?></span>
+
+  <ul class="product-hardness-list">
+    <?php foreach ($hardnessOptions as $hardnessOption) { 
+      if ($hardnessOption['label'] === " ") {
+        continue;
+      }
+      ?>
+      <li class="product-hardness-list-item
+        <?= $hardnessOption['label'] === $productHardness
+          ? 'active">' . $productHardness
+          :  '">'
+        ?>
+      </li>
+    <?php } ?>
+  </ul>
+</div>

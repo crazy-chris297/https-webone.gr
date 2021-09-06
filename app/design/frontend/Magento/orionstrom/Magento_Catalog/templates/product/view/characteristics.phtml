@@ -1,0 +1,66 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+  $mediaUrl = $_product
+    ->getStore()
+    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) 
+    . 'wysiwyg/';
+
+  $baseImgName = 'orionstrom-product-attributes-';
+  $baseAttributeImagePath = BP . '/pub/media/wysiwyg/' . $baseImgName;
+  $productCharacteristicsAttribute = $_product
+    ->getResource()
+    ->getAttribute('characteristics');
+
+  $productCharacteristics = explode(
+    ', ',
+    $productCharacteristicsAttribute->getFrontend()->getValue($_product)
+  );
+
+  $productCharacteristics = array_filter($productCharacteristics);
+  if ($productCharacteristics) {
+?>
+<div class="product-characteristics">
+    <?php 
+      foreach ($productCharacteristics as $productCharacteristic) {
+        $optionId = $productCharacteristicsAttribute->getSource()->getOptionId($productCharacteristic);
+        $optionAdminLabel = str_replace(
+          ' ',
+          '-',
+          strtolower(
+            $productCharacteristicsAttribute
+              ->setStoreId(0)
+              ->getSource()
+              ->getOptionText($optionId)
+          )
+        );
+        $defaultImgPath = $mediaUrl . $baseImgName . 'default' . '.png';
+        $attributeImgPath = $mediaUrl . $baseImgName . $optionAdminLabel . '.png';
+        $imgPath = (!file_exists($baseAttributeImagePath . $optionAdminLabel . '.png'))
+          ? $defaultImgPath
+          : $attributeImgPath
+        ;
+      ?>
+        <span class="product-characteristics-item">
+          <span class="product-characteristics-item-content">
+            <img
+              src="<?= $imgPath ?>"
+              class="product-characteristics-icon"
+            />
+            <span class="product-characteristics-label">
+              <?= $productCharacteristic ?>
+            </span>
+          </span>
+        </span>
+      <?php } ?>
+</div>
+
+<?php } ?>

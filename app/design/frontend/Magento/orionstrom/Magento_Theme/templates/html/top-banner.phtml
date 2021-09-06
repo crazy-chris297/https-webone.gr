@@ -1,0 +1,92 @@
+<?php 
+$html=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('anatomically-mattresses')->toHtml();
+$qehtml=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('quality-expertise')->toHtml();
+$cchtml=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('category-collection')->toHtml();
+$dphtml=$this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('download-pdf')->toHtml();
+$prdhtml = $this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('prd-block')->toHtml();
+
+$qelhtml = $this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('qel-block')->toHtml();
+$qerhtml = $this->getLayout()->createBlock(
+                'Magento\Cms\Block\Block'
+            )->setBlockId('qer-block')->toHtml();
+                                    
+if($html!=''):
+?>
+    
+
+
+<div class="banner">
+    <div class="row">
+        <div class="col-md-6 left-content">
+            <div class="center-content">
+                <?php echo $html; ?>
+            </div>
+            
+        </div>
+        <div class="col-md-6 right-content">
+            <figure>
+                <img src="<?php echo $this->getViewFileUrl('images/orionstrom-layers-01.jpg'); ?>" />
+                
+            </figure>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+
+<?php if($qehtml!=''): ?>
+<div class="big-container">
+    <div class="row">
+        <div class="col-md-2">
+            
+            
+        </div>
+        <div class="col-md-8 center-block">
+            
+            <div class="rtl-content">
+                <?php echo $qelhtml; ?>
+                
+                
+            </div>
+            
+        <div class="row">
+        
+            <?php echo $qehtml; ?>
+        </div>
+            
+        
+            <div class="ltl-content">
+                 <?php echo $qerhtml; ?>
+                
+            </div>   
+        </div>
+        <div class="col-md-2">
+            
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<?php if($cchtml!=''): ?>
+<div class="sb-block">
+<?php echo $cchtml; ?> 
+</div>
+<?php endif; ?>
+
+<?php if($dphtml !=''): ?>
+<?php echo $dphtml; ?> 
+<?php endif; ?>
+
+<?php if($prdhtml !=''): ?>
+    <?php echo $prdhtml; ?> 
+<?php endif; ?>

@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+  $layers = $_product
+    ->getResource()
+    ->getAttribute('layers')
+    ->getFrontend()
+    ->getValue($_product)
+  ;
+?>
+<div class="product-layers">
+  <?= $layers ?>
+</div>

@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+
+  $_product = $block->getProduct();
+
+  $mediaUrl = $_product
+    ->getStore()
+    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+    $productVideo = $_product->getProductVideo();
+    $productVideoID = NULL;
+    if ($productVideo) {
+      $gallery = $block->getGalleryImages()->getItems();
+      foreach ($gallery as $item) {
+        if (
+          isset($item['media_type']) &&
+          $item['media_type'] == 'external-video' &&
+          $item['file'] == $productVideo
+        ) {
+          $productVideoID = explode('.com/', $item['video_url'])[1];
+        }
+      }
+    }
+?>
+<div class="product-layers-video">
+  <div data-mage-init='{"customModal": {}}'>
+    <a href="#" id="layers-video-modal-button">
+      <span class="layers-video-modal-icon"></span>
+    </a>
+  </div>
+
+
+  <div id="layers-video-modal" >
+    <iframe
+      src="https://player.vimeo.com/video/<?= $productVideoID ?>?autoplay=0&loop=1&autopause=0" 
+      width="900"
+      height="500"
+      frameborder="0"
+      allow="fullscreen"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>

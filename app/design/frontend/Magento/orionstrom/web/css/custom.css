@@ -1,0 +1,1230 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+body {
+    color: #333333;
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+}
+a {
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.page-header {
+    background: #000;
+    padding: 0 0 0 30px;
+    box-shadow: 0px 0px 7px 1px #ccc;
+    z-index: 99;
+}
+.header.content {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.logo {
+    margin: 0;
+}
+
+.minicart-wrapper {
+    margin-left: 13px;
+    order: 1;
+    padding: 0;
+    background: #494949;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+.top-contact {
+    margin-left: auto;
+    order: 0;
+}
+
+.minicart-wrapper .action.showcart::before {
+    color: #fff;
+}
+.nav-sections,
+.navigation {
+    background: transparent;
+    margin-bottom: 0;
+}
+.navigation .level0 > .level-top {
+    color: #fff;
+}
+.nav-sections {
+    margin-left: 45px;
+}
+.top-contact,
+.top-contact a {
+    color: #fff;
+    font-family: Ubuntu;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.footer-top-content {
+    padding: 0 15px;
+}
+.ftl-content {
+    background: #d8d4c9;
+    margin: 0 -15px;
+    padding: 40px 85px 0;
+}
+.page-footer {
+    padding-bottom: 0;
+}
+.ftr-content {
+    background: #000;
+    margin: 0 -15px;
+    padding: 0px 15px;
+}
+.payment ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 0;
+}
+
+.col-md-6.ft-address {
+    background: #434343;
+    padding: 40px;
+    min-height: 390px;
+}
+.col-md-6.ft-logo {
+    padding: 65px;
+}
+.payment {
+    margin: 45px -85px 0;
+    background: #fff;
+    padding: 44px 85px;
+}
+.footer-top-content {
+    padding: 0 15px;
+}
+.footer-top-content a {
+    color: #000;
+}
+.footer-top-content h3 {
+    text-transform: uppercase;
+}
+.ft-address h3,
+.ft-address a {
+    color: #fff;
+}
+.footer-top-content ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.top-banner {
+    background: #000;
+    padding: 0;
+}
+.top-banner .row {
+    display: table;
+    width: 100%;
+}
+.top-banner .left-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+.top-banner .right-content {
+    display: table-cell;
+    vertical-align: middle;
+    background: url(../images/orionstrom-icon-bullets.svg);
+    background-repeat: no-repeat;
+    background-position: -5px bottom;
+    background-size: 300px;
+}
+
+.top-banner .row {
+    align-items: center;
+}
+.top-banner .center-content {
+    float: right;
+    padding-right: 140px;
+    color: #fff;
+    max-width: 590px;
+}
+.top-banner h1 {
+    font-size: 75px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.top-banner h3 {
+    color: #c3b399;
+    font-size: 30px;
+}
+.top-banner .action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+.l-ab {
+    flex: 0 0 50%;
+    max-width: 50%;
+    font-size: 20px;
+    background: #c3b399;
+    padding: 35px;
+}
+.r-ab {
+    padding: 35px;
+    background: #fff;
+    color: #000;
+    flex: 0 0 50%;
+    max-width: 50%;
+    font-size: 20px;
+}
+.right-content figure {
+    margin: 0;
+    padding: 97px 0 85px 130px;
+}
+.banner .left-content {
+    background: url(../images/orionstrom-bg-01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position: 0 center;
+    vertical-align: bottom;
+}
+.r-ab p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 13px;
+}
+.r-ab h4 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #c3b399;
+}
+.exlink {
+    background: #c3b399;
+    font-size: 0;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+}
+.exlink::after {
+    content: "\27F6";
+    color: #fff;
+    position: absolute;
+    z-index: 99;
+    left: 9px;
+    top: 6px;
+    font-size: 28px;
+}
+.sb-block {
+    display: flex;
+    flex-wrap: wrap;
+    background: url(../images/orionstrom-icon-bullets.svg);
+    background-repeat: repeat-x;
+    background-position: 0px bottom;
+    background-size: 400px;
+}
+.sb-block .item {
+    flex: 0 0 25%;
+    padding: 120px 45px 40px;
+    max-width: 25%;
+}
+.sb-block .exlink {
+    float: right;
+}
+
+.sb-block h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+}
+.sb-block h4 {
+    font-weight: normal;
+    line-height: 1.1;
+    font-size: 21px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #c3b399;
+    text-transform: uppercase;
+}
+.sb-block figure {
+    margin: 100px 0;
+}
+.big-container {
+    background: #fff;
+    padding: 0;
+}
+.top-banner .big-container .row {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+}
+.big-container .center-block {
+    background: url(../images/center-bg.png);
+    height: 1050px;
+}
+.column.main {
+    min-height: 0;
+    padding-bottom: 0;
+}
+.top-banner .center-block .row {
+    display: table;
+    height: 100%;
+}
+.top-banner .center-block .row .col-md-6 {
+    display: table-cell;
+    vertical-align: top;
+}
+.top-banner .center-block .row .col-md-6.btm-block {
+    vertical-align: bottom;
+}
+
+.sm-title {
+    float: right;
+    max-width: 560px;
+    margin-right: -145px;
+}
+
+.sm-title h2 {
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 65px;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+}
+.btn-rect {
+    background: #c3b399;
+    display: inline-block;
+    height: 150px;
+    width: 145px;
+    margin-left: auto;
+    margin-right: 105px;
+    line-height: 150px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+.stm-block p {
+    padding: 50px 0 0 0;
+    font-size: 18px;
+    text-align: center;
+}
+.left-right-block figure {
+    margin: 0;
+    line-height: 0;
+}
+.ft-address li img {
+    max-width: 67px;
+    height: auto;
+    margin-right: 15px;
+}
+.ft-address li {
+    display: flex;
+    align-items: center;
+}
+.ft-address li .a-item {
+    flex: 1;
+}
+
+/*New css*/
+.container {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+.text-button {
+    position: absolute;
+    bottom: 0;
+    background-color: #c3b399;
+    padding: 36px 60.5px;
+    right: 0;
+    min-height: 235px;
+}
+.text-button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+.left-block {
+    width: 50%;
+    position: relative;
+    float: left;
+}
+.left-block img {
+    max-width: 100%;
+}
+.right-block {
+    width: 50%;
+    position: relative;
+    float: right;
+}
+.right-block img {
+    max-width: 100%;
+}
+.left-right-block::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.product-block {
+    background-image: url(../images/bg-block.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-block-headline h2 {
+    margin: 0 auto;
+}
+.product-block {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+.product-block-headline {
+    text-align: center;
+}
+.product-block-headline h2 {
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    max-width: 325px;
+}
+.product-block-headline strong {
+    color: #a9a395;
+    font-size: 50px;
+}
+.product-block-headline span {
+    color: #000;
+    font-size: 25px;
+}
+.products-tittle {
+    background-color: #c3b399;
+    margin-top: -3px;
+}
+.products-count {
+    width: 30%;
+    display: inline-block;
+    margin-right: 35px;
+    vertical-align: top;
+}
+.products-count img {
+    width: 100%;
+}
+.products-tittle h3 {
+    margin: 0;
+    padding: 20px 15px;
+    min-height: 106px;
+}
+.products-tittle a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+}
+.products {
+    margin-top: 40px;
+}
+.last {
+    margin-right: 0;
+}
+.ltl-content {
+    position: absolute;
+    bottom: 25px;
+    right: -200px;
+    padding: 0px 15px;
+    max-width: 200px;
+}
+
+.rtl-content {
+    position: absolute;
+    top: 246px;
+    left: -200px;
+    padding: 0px 15px;
+    max-width: 200px;
+    text-align: right;
+}
+.rtl-content h4,
+.ltl-content h4 {
+    color: #c3b399;
+    font-size: 22px;
+}
+
+.catalog-category-view .page-main {
+    max-width: 100%;
+    padding: 0;
+}
+.category-view {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    max-height: 745px;
+}
+.category-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.category-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.category-description div {
+    padding: 50px 100px;
+    background: #f6f6f6;
+}
+.catalog-category-view .columns {
+    max-width: 1500px;
+    margin: 40px auto;
+}
+.category-right .page-title-wrapper {
+    padding: 100px;
+}
+.page-products .products-grid .product-item {
+    margin-left: 2%;
+    padding: 5px;
+    width: calc((100% - 6%) / 3);
+    border: 4px solid #434345;
+    margin-top: 2px;
+}
+.product.details.product-item-details {
+    background: #434345;
+    color: #fff;
+    margin: 0 -5px -5px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+.page-products .products-grid .product-item:nth-child(3n + 1) {
+    margin-left: 2%;
+}
+.page-products .products-grid .product-item:nth-child(4n + 1) {
+    margin-left: 2%;
+}
+
+.page-products .product-item-info {
+    width: 100%;
+}
+.products-grid .product-item-info .product-item-inner,
+.products-grid .product-item-info .product-item-inner {
+    display: block !important;
+}
+.products-grid .product-item-info .product-item-inner,
+.products-grid .product-item-info .product-item-inner {
+    margin-left: auto;
+}
+.product-item-link {
+    color: #fff !important;
+}
+.product-item .price-box {
+    margin: 0px 0 15px;
+}
+.product-image-container {
+    width: 100% !important;
+}
+
+.container {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+.contact-left {
+    float: left;
+    width: 50%;
+}
+.contact-right {
+    float: right;
+    width: 50%;
+}
+.contact-right img {
+    width: 100%;
+}
+.contact-title {
+    padding-left: 150px;
+    padding-bottom: 104px;
+}
+.contact-details {
+    background-color: #f6f6f6;
+    padding: 69px 0 69px 150px;
+}
+.text-block {
+    border-left: 12px solid #c3b39a;
+}
+.contact-title h1 {
+    margin: 0;
+    color: #434345;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+}
+.contact-title h2 {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    color: #434345;
+    line-height: 45px;
+}
+.contact-left::after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+.contact-right::before {
+    display: table;
+    clear: both;
+    content: " ";
+}
+.contact-info::after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+.text-block h6 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #424244;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.text-block p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #454545;
+    margin-left: 30px;
+}
+.contact-from-left {
+    float: left;
+    width: 50%;
+}
+.contact-from-right {
+    width: 50%;
+    float: right;
+}
+.contact-from-right iframe {
+    width: 100%;
+    height: 750px;
+}
+.contact-froms {
+    padding: 69px 0 69px 150px;
+}
+.contact-froms input {
+    border: 3px solid #d7d4cb;
+    width: 400px;
+    display: block;
+    margin: 20px 0;
+    padding: 15px 15px;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.contact-froms textarea {
+    border: 3px solid #d7d4cb;
+    font-family: "Ubuntu ", sans-serif;
+    width: 400px;
+    display: block;
+    margin: 20px 0;
+    padding: 15px 15px;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1px;
+    height: 100px;
+}
+.contact-froms button {
+    background-color: #434345;
+    border: none;
+    color: #fff;
+    padding: 15px 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+.fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.page-title-bg img {
+    width: 100%;
+}
+.page-title-bg {
+    position: relative;
+}
+.page-title-text {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    background-color: #ffffff;
+    padding: 110px 150px;
+}
+.page-title-text h5 {
+    margin: 0;
+    font-size: 50px;
+    color: #424244;
+    line-height: 50px;
+    font-weight: 700;
+}
+.page-title-text p {
+    font-size: 27px;
+    color: #414143;
+    line-height: 50px;
+    font-weight: 300;
+}
+.page-content-paragraph-left {
+    width: 40%;
+    text-align: justify;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 140px;
+}
+.page-content-paragraph-right {
+    width: 40%;
+    text-align: justify;
+    display: inline-block;
+    vertical-align: top;
+}
+.page-content-paragraph-left p {
+    line-height: 25px;
+    font-weight: 300;
+    color: #424244;
+}
+.page-content-paragraph-right p {
+    line-height: 25px;
+    font-weight: 300;
+    color: #424244;
+}
+.page-content-title h5 {
+    margin: 60px 0;
+    font-size: 30px;
+    color: #424244;
+    font-weight: 700;
+    padding: 25px 0 25px 35px;
+    border-left: 12px solid #c3b39a;
+}
+
+@media (max-width: 767px) {
+    .ltl-content {
+        right: 0;
+        position: inherit;
+    }
+    .rtl-content {
+        left: 0;
+        position: inherit;
+        top: 0;
+    }
+    .nav-sections {
+        margin-left: 0;
+    }
+    .page-header {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .logo {
+        margin: 3px 0 0 60px;
+    }
+    .nav-toggle::before {
+        color: #fff;
+    }
+    .navigation a,
+    .navigation a:hover {
+        color: #fff;
+    }
+    .navigation .submenu:not(:first-child) ul > li a {
+        color: #fff;
+    }
+    .nav-sections a {
+        color: #fff;
+        font-size: 20px;
+    }
+    .top-banner .row {
+        display: block;
+        margin: 0;
+    }
+    .top-banner .left-content {
+        display: block;
+    }
+    .big-container .center-block {
+        height: auto;
+    }
+    .right-content figure {
+        padding: 60px 0 45px 60px;
+    }
+    .sb-block {
+        display: block;
+    }
+    .sb-block .item {
+        padding: 50px 45px 40px;
+        max-width: 100%;
+    }
+    .products-count {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .top-banner .center-block .row .col-md-6 {
+        display: block;
+    }
+    .sm-title {
+        float: none;
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .top-banner .center-content {
+        float: none;
+        padding-right: 0;
+        color: #fff;
+        max-width: 100%;
+        padding-top: 45px;
+    }
+    .top-banner .action-bar {
+        margin-top: 70px;
+    }
+}
+@media (max-width: 480px) {
+    .top-contact,
+    .top-contact a {
+        display: none;
+    }
+    .top-banner h1 {
+        font-size: 57px;
+    }
+    .minicart-wrapper {
+        margin-left: auto;
+    }
+    .sm-title h2 {
+        font-size: 45px;
+    }
+    .products-count {
+        width: 100%;
+    }
+}
+
+.product-info-head {
+    background: url(../images/orionstrom-bg-01.jpg);
+    color: #fff;
+    padding: 60px 0 0;
+    overflow: hidden;
+}
+
+.product-info-head .product-image {
+    text-align: center;
+}
+
+.product-info-head .product-image img {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.product-title h1 {
+    margin-bottom: 5px;
+}
+
+ul.product-types {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.25em;
+    display: flex;
+}
+
+ul.product-types:not(:first-child) {
+    margin-left: 0;
+}
+
+ul.product-types li {
+    border: 2px solid white;
+    padding: 2px 10px;
+    margin-left: -2px;
+}
+
+ul.product-types li:nth-of-type(odd) {
+    background-color: #000;
+}
+ul.product-types li:nth-of-type(2n) {
+    background-color: #fff;
+    color: #333333;
+}
+ul.product-types li:nth-of-type(4n) {
+    background-color: #d8d4c9;
+    color: #333333;
+}
+
+.product-hardness {
+    display: flex;
+}
+
+.product-hardness-title {
+    font-size: 1.3em;
+    margin-right: 20px;
+}
+
+.product-hardness-list {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+li.product-hardness-list-item {
+    background: #fff;
+    display: inline-flex;
+    margin: 0 5px;
+    border-radius: 100%;
+    justify-content: center;
+    font-weight: bold;
+    width: 30px;
+    align-items: center;
+    height: 30px;
+}
+
+li.product-hardness-list-item.active {
+    background: #d8d4c9;
+    color: #000;
+}
+
+.sku-big-container:after {
+    content: "";
+    background-image: url(../images/orionstrom-icon-bullets.svg);
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    left: 15px;
+    z-index: 0;
+}
+
+.product-sku-big {
+    display: inline-flex;
+}
+
+.product-sku-big-title {
+    font-size: 4em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 100%;
+    background: white;
+    padding: 50px;
+    z-index: 1;
+}
+
+.product-characteristics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-characteristics-item {
+    margin-top: 30px;
+    flex: 0 0 25%;
+}
+
+.product-characteristics-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-characteristics-icon {
+    width: 50px;
+}
+
+.product-characteristics-label {
+    background: #cccccc;
+    color: #000;
+    padding: 5px 9px;
+    margin: 5px auto;
+}
+
+.product-description-container {
+    padding: 50px 0;
+}
+
+.product-description-container h2 {
+    margin-bottom: 4.5rem;
+}
+
+.product-guarantee {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-guarantee-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.guarantee {
+    font-size: 50px;
+}
+
+.guarantee-years {
+    font-size: 30px;
+}
+.guarantee-guarantee {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.product-materials {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+.product-materials > img {
+    width: 73px;
+    height: 103px;
+    object-fit: contain;
+    object-position: top;
+}
+.product-materials > img + img {
+    margin-left: 10px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.product-info-layers {
+    background: linear-gradient(90deg, #242424 50%, black 50%);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.product-info-layers > .page-main {
+    margin: 0;
+}
+
+.product-info-layers-left {
+    padding: 50px 0;
+    background-color: #242424;
+    color: #fff;
+}
+
+.product-info-layers-right {
+    position: relative;
+    height: 100%;
+}
+
+.product-info-layers-right img {
+    height: 400px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 0;
+}
+
+.product-info-layers-right img:after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: red;
+    left: 0;
+    right: 0;
+    display: block;
+}
+
+.product-layers-right {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/orionstrom-icon-bullets.svg);
+    background-repeat: no-repeat;
+    margin: 70px 0;
+}
+
+.product-info-layers-right-video-numlayers {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.layers-video-modal-icon {
+    padding: 25px;
+    background-color: white;
+    display: inline-block;
+}
+
+.layers-video-modal-icon:after {
+    content: "";
+    background-image: url(../images/orionstrom-icon-play.svg);
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.product-layers-numlayers {
+    background: white;
+    display: inline-block;
+    padding: 9px 24px;
+    width: 100px;
+    height: 100px;
+}
+
+.numlayers-num {
+    display: block;
+    text-align: center;
+    font-size: 37px;
+    font-weight: bold;
+}
+
+.numlayers-text {
+    font-size: 0.792em;
+    display: table-caption;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.product-video-modal .modal-header {
+    display: none !important;
+}
+
+.product-video-modal .modal-content {
+    padding: 0 !important;
+}
+
+.product-video-modal .modal-inner-wrap {
+    width: min-content !important;
+}
+
+#layers-video-modal iframe {
+    height: 500px;
+    min-width: 900px;
+}
+
+.product-price-configuration {
+    margin-top: 80px;
+    color: #434343;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.my-mid {
+    margin: 30px 0;
+}
+
+hr {
+    width: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.price-configuration .form-group {
+    margin-bottom: 10px;
+}
+
+.price-configuration .form-control {
+    border: 3px solid #d8d4c9;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.price-config-circles {
+    display: flex;
+}
+
+.price-config-circle {
+    flex: 1;
+    background-color: #c3b399;
+    padding: 30px;
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 3px solid #c3b399;
+    font-size: 17px;
+}
+
+.price-config-circle:not(:first-of-type) {
+    margin-left: 5px;
+}
+
+.price-config-circle hr {
+    border-color: white;
+}
+.price-config-circle span {
+    display: block;
+}
+
+.price-config-circle.bordered {
+    background-color: #fff;
+    color: #c3b399;
+}
+
+.price-config-circle.bordered hr {
+    border-color: #968f83;
+}
+
+.price-config-circle .big-text {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.config-form-input.white {
+    border-color: white;
+    background-color: transparent;
+}
+
+.price-config-circle .config-row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.price-config-circle .config-row + .config-row {
+    border-top: 1px solid white;
+    width: 100%;
+    text-align: center;
+}
+
+.price-config-circle.bordered .config-row + .config-row {
+    border-top: 1px solid #968f83;
+}
+.product-price-configuration .payment-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.product-price-configuration .pricing-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-price-configuration .payment-text::after {
+    content: "";
+    background-image: url(../images/orionstrom-icon-bullets.svg);
+    display: block;
+    position: relative;
+    width: 120%;
+    height: 100px;
+    background-repeat: repeat-x;
+    background-size: cover;
+    align-self: start;
+    margin-top: 15px;
+}

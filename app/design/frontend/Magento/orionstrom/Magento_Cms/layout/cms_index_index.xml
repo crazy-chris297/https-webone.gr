@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	
+		<referenceContainer name="page.top">
+			<container htmlTag="div" htmlClass="banner-top" after="-">
+				<container htmlTag="div" htmlClass="wrapper">
+					<block class="Magento\Framework\View\Element\Template" name="banner-top" template="Magento_Theme::html/banner-top.phtml"/>
+				</container>
+			</container>
+			
+		</referenceContainer>
+		
+		<referenceBlock name="page.wrapper">
+			<container htmlTag="div" htmlClass="wide-wrapper" before="main.content">
+				<container htmlTag="div" htmlClass="home-content">
+					<container htmlTag="div" htmlClass="top-banner">
+						<block class="Magento\Framework\View\Element\Template" name="services" template="Magento_Theme::html/top-banner.phtml"/>
+					</container>
+					
+					<block class="Magento\Framework\View\Element\Template" name="bestseller" template="Magento_Theme::html/home-content.phtml"/>
+					<block class="Magento\Cms\Block\Block" name="best-seller">
+						<arguments>
+							<argument name="block_id" xsi:type="string">best-seller</argument>
+						</arguments>
+					</block>
+				</container>
+				
+				<container htmlTag="div" htmlClass="testimonial">
+					<container htmlTag="div" htmlClass="page-main">
+						<block class="Magento\Framework\View\Element\Template" name="testimonial" template="Magento_Theme::html/testimonial.phtml"/>
+					</container>
+				</container>
+				
+				<container htmlTag="div" htmlClass="page-main">
+					<container htmlTag="div" htmlClass="cnts-block">
+						<block class="Magento\Cms\Block\Block" name="contact-us">
+							<arguments>
+								<argument name="block_id" xsi:type="string">contact-us-today</argument>
+							</arguments>
+						</block>
+					</container>
+				</container>
+			</container>
+		</referenceBlock>
+		
+		
+    <body/>
+</page>
